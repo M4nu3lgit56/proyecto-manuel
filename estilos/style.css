@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/bukhari-script');
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
 
 html {
     max-width: 1400px;
@@ -32,7 +32,7 @@ a {
 header {
     text-align: center;
     padding: 20px;
-    background: blue;
+    background: #004173;
 }
 
 header img {
@@ -42,7 +42,11 @@ header img {
 }
 
 .banner-title {
-    font-family: 'Bukhari Script', sans-serif;
+    color: white;
+    font-size: 40px;
+    font-family: "Oranienbaum", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .banner-user {
@@ -71,7 +75,11 @@ nav li {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+.section-main img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
     html {
         max-width: 100%;
         margin: 0;
@@ -83,7 +91,7 @@ nav li {
     }
 
     h1 {
-        font: 700 2.5rem;
+        font-size: 35px;
     }
 
     h2 {
@@ -102,7 +110,6 @@ nav li {
         padding: 10px;
         display: inline-block;
     }
-
 
     header img {
         display: none;
