@@ -1,0 +1,119 @@
+@import url('https://fonts.cdnfonts.com/css/bukhari-script');
+
+html {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+body {
+    font-size: 400 1rem;
+    color: #000000;
+    padding-left: 70px;
+}
+
+h1 {
+    font-size: 700 300%;
+}
+
+h2 {
+    font: 700 200%;
+}
+
+h3 {
+    font: 700 150%;
+}
+
+a {
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: blue;
+}
+
+header img {
+    float: left;
+    width: 10%;
+    border-radius: 50%;
+}
+
+.banner-title {
+    font-family: 'Bukhari Script', sans-serif;
+}
+
+.banner-user {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+}
+
+nav ul {
+    padding: 20px;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav li {
+    padding: 15px 0;
+}
+
+.btn-nav {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    body {
+        font: 400 0.875rem;
+        padding-left: 20px;
+    }
+
+    h1 {
+        font: 700 2.5rem;
+    }
+
+    h2 {
+        font: 700 1.75rem;
+    }
+
+    h3 {
+        font: 700 1.25rem;
+    }
+
+    h1, h2, h3 {
+        margin: 10px 0;
+    }
+
+    a {
+        padding: 10px;
+        display: inline-block;
+    }
+
+
+    header img {
+        display: none;
+    }
+
+    .btn-nav {
+        display: grid;
+        padding: 15px 0;
+    }
+
+    nav ul {
+        display: none;
+    }
+}
