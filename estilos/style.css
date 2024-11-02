@@ -2,18 +2,21 @@
 
 html {
     max-width: 100%;
-    margin: 0 auto;
-    background-color: #ffffff;
 }
 
 body {
-    font-size: 400 1rem;
+    background: #dbdbdb;
     color: #000000;
-    padding-left: 70px;
+    padding-left: 60px;
+    transition: padding-left 0.3s ease-in-out;
+}
+
+.body-movement {
+    padding-left: 120px;
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 60px;
 }
 
 h2 {
@@ -35,12 +38,6 @@ header {
     background: #004173;
 }
 
-header img {
-    float: left;
-    width: 10%;
-    border-radius: 50%;
-}
-
 .banner-title {
     color: white;
     font-size: 40px;
@@ -59,49 +56,93 @@ nav {
     top: 0;
     width: 50px;
     height: 100%;
+    background: #3a3a3a;
+    transition: width 0.3s ease-in-out;
 }
 
 nav ul {
+    left: 0;
     padding: 20px;
-    margin: 0;
+    margin-left: -10px;
+    margin-top: -10px;
     list-style-type: none;
 }
 
 nav li {
-    padding: 15px 0;
+    padding-right: 4px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    transition: padding-right 0.3s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+    color: #ffffff
 }
 
-.btn-nav {
+.material-symbols-outlined.btn-nav {
     display: none;
 }
 
-.section-main img {
-    width: 100%;
+nav ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
-@media only screen and (max-width: 480px) {
+.text-nav {
+    transform: scaleX(0);
+    margin-left: 10px;
+    white-space: nowrap;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.section-main {
+    display: flex;
+    gap: 20px;
+}
+
+.img-sect {
+    width: 30%;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.img-sect img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.text-sect {
+    text-align: center;
+}
+
+.text-sect p {
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 768px) {
     html {
-        margin: 0;
+        max-width: 100%;
+        margin: 0 auto;
+        background-color: #ffffff;
     }
 
     body {
-        font: 400 0.875rem;
-        padding-left: 20px;
+        color: #000000;
+        padding-left: 50px;
+        transition: padding-left 0.3s ease-in-out;
     }
 
     h1 {
         font-size: 35px;
     }
 
-    h2 {
-        font: 700 1.75rem;
-    }
-
+    h1,
+    h2,
     h3 {
-        font: 700 1.25rem;
-    }
-
-    h1, h2, h3 {
         margin: 10px 0;
     }
 
@@ -114,23 +155,115 @@ nav li {
         display: none;
     }
 
-    .btn-nav {
+    .material-symbols-outlined.btn-nav {
         display: grid;
         padding: 15px 0;
+        left: 0;
+        padding: 20px;
+        margin-left: -10px;
+        margin-top: -10px;
     }
+
+    nav {
+        width: 50px;
+    }
+
 
     nav ul {
         display: none;
     }
+
+    @media (max-width: 320px) {
+        nav {
+            width: 30px;
+        }
+
+        body {
+            padding-left: 30px;
+        }
+
+        .material-symbols-outlined.btn-nav {
+            display: grid;
+            padding: 20px;
+            padding-bottom: 5px;
+            left: 0;
+            margin-left: -18px;
+            margin-top: -15px;
+            cursor: pointer;
+        }
+    }
 }
 
 @media (min-width: 2024px) {
+
+    body {
+        padding-left: 110px;
+    }
+
+    .body-movement {
+        padding-left: 220px;
+    }
+
     h1 {
         font-size: 100px;
     }
 
-    nav li svg {
-        width: 40px;
-        height: 40px;
+    p {
+        font-size: 30px;
+    }
+
+    nav ul li .material-symbols-outlined {
+        font-size: 40px;
+    }
+
+    .text-nav {
+        font-size: 30px;
+    }
+
+    nav {
+        width: 100px;
+    }
+
+    nav ul {
+        left: 0;
+        padding: 20px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    nav:hover .text-nav {
+        transform: scaleX(1);
+    }
+
+    nav:hover {
+        width: 215px;
+    }
+
+    nav ul li:hover {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    nav ul:hover li {
+        padding-right: 100px;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    nav:hover .text-nav {
+        transform: scaleX(1);
+    }
+
+    nav:hover {
+        width: 120px;
+    }
+
+    nav ul li:hover {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    nav ul:hover li {
+        padding-right: 100px;
     }
 }
