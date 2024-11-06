@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     const nav = document.querySelector(".container-nav");
     const clic = document.querySelectorAll(".click")
+    const menu = document.querySelector('.btn-nav')
+
+    menu.addEventListener('click', function() {
+        nav.classList.toggle('active')
+    })
 
     if (!('ontouchstart' in window) && navigator.maxTouchPoints === 0) {
         nav.addEventListener('mouseenter', function () {
@@ -21,19 +26,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
             switch (valor) {
                 case 0:
-                    window.location.href = pag
                 case 1:
-                    window.location.href = pag
                 case 2:
-                    window.location.href = pag
                 case 3:
-                    window.location.href = pag
                 case 4:
-                    window.location.href = pag
                 case 5:
                     window.location.href = pag
+                    break;
                 case 6:
                     window.open(pag, "_blank")
+                    break;
             }
 
         })

@@ -1,0 +1,74 @@
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section h2 {
+    font-size: 2rem;
+}
+
+.serv-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.serv-content {
+    display: flex;
+    width: 13rem;
+    height: 14rem;
+    flex-direction: column;
+    justify-content: center;
+    border: 0.25rem double #f85454;
+    background: #005799;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.serv-content-a {
+    display: flex;
+    width: 13rem;
+    height: 14rem;
+    flex-direction: column;
+    justify-content: center;
+    border: 0.25rem double #005799;
+    background: #f85454;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.serv-info {
+    text-align: center;
+    color: #fff;
+}
+
+.serv-img {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.serv-img img {
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+@media (min-width: 2024px) {
+    .serv-main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+        margin: 10rem 0;
+    }
+
+    .serv-content, .serv-content-a {
+        width: 20rem;
+        height: 19rem;
+    }
+}

@@ -1,0 +1,126 @@
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-main-n {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9rem;
+}
+
+.img-sect-n {
+    width: 30%;
+    height: auto;
+    margin-left: 1.25rem;
+    margin-top: 2.5rem;
+}
+
+.img-sect-n img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.text-sect-n {
+    width: 35rem;
+    margin-right: 1.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.section-main-y {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.img-sect-y {
+    width: 25%;
+    height: auto;
+    margin-left: 1.25rem;
+    margin-top: 2.5rem;
+}
+
+.img-sect-y img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.text-sect-y {
+    width: 28rem;
+    margin-left: 2rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.section-main-z {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.img-sect-z {
+    width: 15%;
+    height: auto;
+    margin-left: 1.25rem;
+    margin-top: 2.5rem;
+}
+
+.img-sect-z img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.text-sect-z {
+    width: 30rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    .section-main-n, .section-main-y, .section-main-z {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .img-sect-n, .img-sect-y, .img-sect-z {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    .text-sect-n, .text-sect-y, .text-sect-z {
+        width: 90%;
+        font-size: 1.1rem;
+        margin: 0;
+    }
+}
+
+@media (min-width: 2024px) {
+    .section-main-n, .section-main-y, .section-main-z {
+        gap: 12rem;
+    }
+
+    .img-sect-n, .img-sect-y, .img-sect-z {
+        width: 40%; 
+    }
+
+    .text-sect-n {
+        width: 50rem;
+        font-size: 1.5rem;
+    }
+
+    .text-sect-y {
+        width: 40rem;
+        font-size: 1.5rem; 
+    }
+
+    .text-sect-z {
+        width: 45rem;
+        font-size: 1.5rem;
+    }
+}

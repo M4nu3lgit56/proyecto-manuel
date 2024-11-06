@@ -1,0 +1,34 @@
+section h2 {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.rev-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: auto;
+    margin: 2rem 1rem;
+}
+
+.rev-content {
+    width: 20%;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #f85454;
+}
+
+.rev-content-a {
+    width: 20%;
+    height: auto;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #005799;
+}
+
+.rev-text {
+    text-align: center;
+    margin: 2.8% 2.8%;
+}
