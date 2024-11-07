@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const clic = document.querySelectorAll(".click")
     const menu = document.querySelector('.btn-nav')
 
-    menu.addEventListener('click', function() {
+    menu.addEventListener('click', function () {
         nav.classList.toggle('active')
     })
 
@@ -20,12 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     clic.forEach(element => {
-        element.addEventListener('click', function () {
+        element.addEventListener('click', function (element) {
             const valor = parseInt(this.getAttribute('valor'))
             const pag = this.getAttribute('pag')
 
             switch (valor) {
-                case 0:
                 case 1:
                 case 2:
                 case 3:

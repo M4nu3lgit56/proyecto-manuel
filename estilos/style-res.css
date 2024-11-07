@@ -8,9 +8,8 @@ section h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100vw;
+    width: 100%;
     height: auto;
-    margin: 2rem 1rem;
 }
 
 .rev-content {
@@ -18,6 +17,7 @@ section h2 {
     border: 1px solid #000;
     border-radius: 4px;
     background-color: #f85454;
+    margin: 2rem;
 }
 
 .rev-content-a {
@@ -26,6 +26,7 @@ section h2 {
     border: 1px solid #000;
     border-radius: 4px;
     background-color: #005799;
+    margin: 2rem;
 }
 
 .rev-text {

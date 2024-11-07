@@ -52,7 +52,7 @@ nav ul {
     list-style-type: none;
 }
 
-nav li {
+nav .click {
     padding-right: 4px;
     padding-top: 5px;
     margin-bottom: 10px;
@@ -67,7 +67,7 @@ nav li {
     display: none;
 }
 
-nav ul li {
+nav ul .click {
     list-style: none;
     display: flex;
     align-items: center;
