@@ -1,0 +1,133 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #004173;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #004173;
+}
+
+.contact-main {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 97%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contact-main h3 {
+    color: #004173;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.schedule-main,
+.form-main {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.schedule p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+form input[type="date"],
+form input[type="time"],
+form input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+form input[type="submit"] {
+    background-color: #f85454;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e04b4b;
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 1024px) {
+    .contact-main {
+        flex-direction: row;
+    }
+
+    .schedule-main,
+    .form-main {
+        padding: 2rem;
+    }
+
+    .form-main form input[type="submit"] {
+        max-width: 200px;
+        align-self: center;
+    }
+}
+
+/* Media query para pantallas pequeñas (teléfonos) */
+@media (max-width: 768px) {
+    section {
+        padding: 1rem;
+    }
+
+    .contact-main {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .form-main,
+    .schedule-main {
+        padding: 1rem;
+    }
+
+    form label, 
+    form input[type="date"], 
+    form input[type="time"], 
+    form input[type="text"], 
+    form input[type="submit"] {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .schedule p {
+        font-size: 0.9rem;
+    }
+}

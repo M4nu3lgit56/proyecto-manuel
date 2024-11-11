@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.querySelector(".container-nav");
+    const nav = document.querySelector(".container-nav")
     const clic = document.querySelectorAll(".click")
     const menu = document.querySelector('.btn-nav')
+    const password = localStorage.getItem('password') || ""
 
     menu.addEventListener('click', function () {
         nav.classList.toggle('active')
@@ -20,11 +21,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     clic.forEach(element => {
-        element.addEventListener('click', function (element) {
+        element.addEventListener('click', function() {
             const valor = parseInt(this.getAttribute('valor'))
             const pag = this.getAttribute('pag')
 
             switch (valor) {
+                case 0:
+                    if (password) {
+                        window.location.href = ''
+                    } else {
+                        window.location.href = 'register.html'
+                    }
+                    break;
                 case 1:
                 case 2:
                 case 3:

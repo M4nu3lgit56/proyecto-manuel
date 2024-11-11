@@ -1,35 +1,90 @@
+/* Estilos generales */
 section h2 {
     margin-top: 2rem;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem; /* Ajuste para una mejor visibilidad en dispositivos pequeños */
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 95%;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .rev-main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem; /* Espacio entre las reseñas */
     width: 100%;
-    height: auto;
 }
 
-.rev-content {
-    width: 20%;
+/* Estilos para las reseñas individuales */
+.rev-content,
+.rev-content-a {
+    width: 22%;
+    min-width: 250px; /* Tamaño mínimo para dispositivos móviles */
     border: 1px solid #000;
     border-radius: 4px;
     background-color: #f85454;
-    margin: 2rem;
+    margin: 1rem;
+    transition: transform 0.3s; /* Efecto hover */
+}
+
+/* Colores específicos para cada tipo de reseña */
+.rev-content {
+    background-color: #f85454;
 }
 
 .rev-content-a {
-    width: 20%;
-    height: auto;
-    border: 1px solid #000;
-    border-radius: 4px;
     background-color: #005799;
-    margin: 2rem;
 }
 
+/* Estilos de texto dentro de la reseña */
 .rev-text {
     text-align: center;
-    margin: 2.8% 2.8%;
+    margin: 1rem;
+    font-size: 1rem;
+}
+
+/* Efecto hover */
+.rev-content:hover,
+.rev-content-a:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .rev-content,
+    .rev-content-a {
+        width: 45%; /* Se muestran dos reseñas por fila en tabletas */
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rev-content,
+    .rev-content-a {
+        width: 100%; /* Una reseña por fila en dispositivos móviles */
+        margin: 1rem 0;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .rev-text {
+        font-size: 0.9rem; /* Ajuste de fuente para pantallas pequeñas */
+    }
 }

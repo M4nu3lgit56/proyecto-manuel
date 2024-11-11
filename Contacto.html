@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reseñas</title>
+    <title>HECTOR BABER | Contacto</title>
     <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/style-res.css">
+    <link rel="stylesheet" href="estilos/style-contac.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <script src="script.js"></script>
     <script src="user.js"></script>
-    <script src="res.js"></script>
     <script src="https://kit.fontawesome.com/900790a2ff.js" crossorigin="anonymous"></script>
 </head>
 
@@ -54,16 +53,32 @@
     </header>
 
     <section>
-        <div class="section-container">
-            <h2>RESEÑAS</h2>
-            <div class="rev-main">
+        <div class="contact-main">
+            <div class="schedule-main">
+                <h3>Horarios</h3>
+                <div class="schedule">
+                    <p>Lunes a Viernes: 7:00 am - 8:00 pm</p>
+                       <p>Sabados y Jueves: 7:00 am - 4:pm</p>
+                       <p>Domingos y Festivos: 1:00 pm - 7:00 pm</p>
+                </div>
+            </div>
+            <div class="form-main">
+                <h3>CONTACTO</h3>
+                <form id="contact-form">
+                    <label for="dia">Fecha:</label>
+                    <input type="date" id="dia" required>
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" required>
+                    <label for="servicio">Servicio:</label>
+                    <input type="text" id="servicio" required>
+                    <input type="submit" value="RESERVAR CITA">
+                </form>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&#169;2024 hectormaza <i class="fa-brands fa-instagram fa-lg click" valor="6"
-                pag="https://www.instagram.com/hector.maza.980?igsh=MWdvbHRpcmxmNHZwcQ%3D%3D&utm_source=qr"></i></p>
+        <p>&#169;2024 hectormaza <i class="fa-brands fa-instagram fa-lg click" valor="6" pag="https://www.instagram.com/hector.maza.980?igsh=MWdvbHRpcmxmNHZwcQ%3D%3D&utm_source=qr"></i></p>
     </footer>
 
 </body>
