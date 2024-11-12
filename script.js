@@ -2,7 +2,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const nav = document.querySelector(".container-nav")
     const clic = document.querySelectorAll(".click")
     const menu = document.querySelector('.btn-nav')
-    const password = localStorage.getItem('password') || ""
+    const contacto = document.querySelector('.form-main')
+
+    if (contacto) {
+        contacto.addEventListener('submit', function() {
+            alert('Tu cita ha sido enviada. Recibiras un correo con la confirmación o negación de tu cita.')
+        })
+    }
+
 
     menu.addEventListener('click', function () {
         nav.classList.toggle('active')
