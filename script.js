@@ -27,18 +27,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
             switch (valor) {
                 case 0:
-                    if (password) {
-                        window.location.href = ''
+                    if (JSON.parse(localStorage.getItem('openLogin')) === true) {
+                        window.location.href = 'User.html'
                     } else {
-                        window.location.href = 'register.html'
+                        window.location.href = pag
                     }
                     break;
                 case 1:
                 case 2:
                 case 3:
                 case 4:
-                case 5:
                     window.location.href = pag
+                    break;
+                case 5:
+                    if (JSON.parse(localStorage.getItem('openLogin')) === true) {
+                        window.location.href = pag
+                    } else {
+                        window.location.href = 'register.html'
+                    }
                     break;
                 case 6:
                     window.open(pag, "_blank")

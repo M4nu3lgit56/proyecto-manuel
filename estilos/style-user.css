@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container-user-info {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    text-align: center;
+}
+
+.user-info h1 {
+    color: #005799;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.user-info p {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.user-info span.user {
+    font-weight: bold;
+    color: #f85454;
+}
+
+/* Button Styles */
+input[type="button"].back {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #005799;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="button"].back:hover {
+    background-color: #f85454;
+}
+
+input[type="button"].close-login {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #f85454;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="button"].close-login:hover {
+    background-color: #005799;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container-user-info {
+        width: 90%;
+    }
+
+    .user-info h1 {
+        font-size: 1.2rem;
+    }
+
+    .user-info p {
+        font-size: 1rem;
+    }
+}

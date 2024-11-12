@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.register-main {
+    width: 100%;
+    max-width: 450px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.register-text {
+    background-color: #005799;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.register-text b {
+    color: #f85454;
+}
+
+.register-container {
+    padding: 2rem;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.register-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.register-form input[type="text"]:focus,
+.register-form input[type="email"]:focus,
+.register-form input[type="password"]:focus,
+.register-form select:focus {
+    border-color: #005799;
+    outline: none;
+}
+
+.register-form input[type="submit"] {
+    padding: 0.75rem;
+    background-color: #005799;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-form input[type="submit"]:hover {
+    background-color: #f85454;
+}
+
+.register-form a {
+    color: #005799;
+}
+
+.register-form  a:hover {
+    color: #f85454;
+}
+
+@media (max-width: 480px) {
+    .register-main {
+        width: 90%;
+    }
+
+    .register-text {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}

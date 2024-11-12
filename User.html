@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script ></script>
+    <title>HECTOR BARBER | Información de usuario</title>
+    <script src="user.js"></script>
+    <link rel="stylesheet" href="estilos/style-user.css">
 </head>
 <body>
-    
+    <section>
+        <input type="button" class="back" id="back" value="Volver al inicio" onclick="back()">
+        <div class="container-user-info">
+            <div class="user-info">
+                <h1>Hola! <span class="user" id="nameUser"></span>. Puedes mirar tu información y cerrar sesion mediante esta página.</h1>
+                <p class="userInfo">Nombre: <span id="nameInfo"></span></p>
+                <p class="userInfo">Email: <span id="emailInfo"></span></p>
+                <p class="userInfo">Contraseña: <span id="pswInfo"></span></p>
+                <p class="userInfo">Genero: <span id="genderInfo"></span></p>
+
+                <input type="button" value="CERRAR SESIÓN" class="close-login" id="closeLogin">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
