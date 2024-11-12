@@ -11,9 +11,11 @@ window.addEventListener('load', function () {
             window.location.href = 'index.html'
         })
 
-        function back() {
+        const back = document.getElementById('back')
+
+        back.addEventListener('click', function () {
             window.location.href = 'index.html'
-        }
+        })
 
         const nameInfo = document.getElementById('nameInfo');
         const nameUser = document.getElementById('nameUser');
