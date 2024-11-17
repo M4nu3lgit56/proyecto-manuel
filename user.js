@@ -23,10 +23,10 @@ window.addEventListener('load', function () {
         const pswInfo = document.getElementById('pswInfo');
         const genderInfo = document.getElementById('genderInfo');
 
-        const password = localStorage.getItem('password') || "";
+        const email = localStorage.getItem('email') || "";
         const users = JSON.parse(localStorage.getItem('users')) || [];
 
-        const foundUser = users.find(element => element.psw === password);
+        const foundUser = users.find(element => element.email === email);
 
         if (foundUser) {
             nameInfo.textContent = foundUser.name;
@@ -48,38 +48,43 @@ window.addEventListener('load', function () {
 
             const users = JSON.parse(localStorage.getItem('users')) || [];
 
-            const exists = users.some(user => user.email === emailR || user.name === userR);
+            if (userR && emailR && pswR && genderR) {
+                const exists = users.some(user => user.email === emailR || user.name === userR);
 
-            if (exists) {
-                alert('El Usuario o correo electronico ya está registrado.');
+                if (exists) {
+                    alert('El Usuario o correo electronico ya está registrado.');
+                } else {
+                    const newUser = {
+                        name: userR,
+                        email: emailR,
+                        psw: pswR,
+                        gender: genderR
+                    };
+                    users.push(newUser);
+                    localStorage.setItem("users", JSON.stringify(users));
+                    alert('Registro exitoso');
+                    window.location.replace('login.html');
+                }
             } else {
-                const newUser = {
-                    name: userR,
-                    email: emailR,
-                    psw: pswR,
-                    gender: genderR
-                };
-                users.push(newUser);
-                localStorage.setItem("users", JSON.stringify(users));
-                alert('Registro exitoso');
-                window.location.replace('login.html');
+                alert('Rellena los campos.')
             }
         });
     } else if (login) {
         login.addEventListener('submit', function (event) {
             event.preventDefault();
 
-            const UoELogin = document.getElementById('usuarioLogin').value;
+            const emailLogin = document.getElementById('usuarioLogin').value;
             const pswLogin = document.getElementById('pswLogin').value;
 
             const users = JSON.parse(localStorage.getItem('users')) || [];
 
-            const validUser = users.some(user => (user.name === UoELogin || user.email === UoELogin) && user.psw === pswLogin);
+            const validUser = users.some(user => user.email === emailLogin && user.psw === pswLogin);
+            const emailUser = users.find(user => user.email === emailLogin)
 
             if (validUser) {
                 localStorage.setItem('openLogin', JSON.stringify(true))
-                const password = pswLogin;
-                localStorage.setItem('password', password);
+                const email = emailUser.email;
+                localStorage.setItem('email', email);
                 alert('Inicio de Sesión exitoso.');
                 window.location.replace('index.html');
             } else {
@@ -89,20 +94,18 @@ window.addEventListener('load', function () {
     }
 
     if (user) {
-        const password = localStorage.getItem('password') || "";
+        const email = localStorage.getItem('email') || "";
         const users = JSON.parse(localStorage.getItem('users')) || [];
 
         if (JSON.parse(localStorage.getItem('openLogin')) === true) {
-            if (password) {
-                const foundUser = users.find(element => element.psw === password);
+            if (email) {
+                const foundUser = users.find(element => element.email === email);
 
                 if (foundUser) {
                     user_camp.textContent = foundUser.name;
                     user_camp.classList.add('text-nav')
                     user.classList.remove('click');
                     user.classList.add('user')
-                    console.log(user_camp.classList)
-                    console.log(user.classList)
                 }
 
             }

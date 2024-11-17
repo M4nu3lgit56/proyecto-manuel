@@ -1,8 +1,7 @@
-/* Estilos generales */
 section h2 {
     margin-top: 2rem;
     text-align: center;
-    font-size: 2rem; /* Ajuste para una mejor visibilidad en dispositivos pequeños */
+    font-size: 2rem;
 }
 
 .section-container {
@@ -23,49 +22,46 @@ section h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem; /* Espacio entre las reseñas */
+    gap: 1rem;
     width: 100%;
 }
 
-/* Estilos para las reseñas individuales */
 .rev-content,
 .rev-content-a {
     width: 22%;
-    min-width: 250px; /* Tamaño mínimo para dispositivos móviles */
+    min-width: 250px;
     border: 1px solid #000;
-    border-radius: 4px;
-    background-color: #f85454;
+    border-radius: 10px;
     margin: 1rem;
-    transition: transform 0.3s; /* Efecto hover */
+    box-shadow: 8px 9px 20px 0px black;
+    transition: transform 0.3s;
 }
 
-/* Colores específicos para cada tipo de reseña */
 .rev-content {
     background-color: #f85454;
 }
 
 .rev-content-a {
-    background-color: #005799;
+    background-color: #168fec;
 }
 
-/* Estilos de texto dentro de la reseña */
 .rev-text {
+    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 1rem;
     font-size: 1rem;
+    font-weight: bolder;
 }
 
-/* Efecto hover */
 .rev-content:hover,
 .rev-content-a:hover {
     transform: scale(1.05);
 }
 
-/* Estilos responsivos */
 @media (max-width: 768px) {
     .rev-content,
     .rev-content-a {
-        width: 45%; /* Se muestran dos reseñas por fila en tabletas */
+        width: 45%;
     }
 
     section h2 {
@@ -76,7 +72,7 @@ section h2 {
 @media (max-width: 480px) {
     .rev-content,
     .rev-content-a {
-        width: 100%; /* Una reseña por fila en dispositivos móviles */
+        width: 100%;
         margin: 1rem 0;
     }
 
@@ -85,6 +81,6 @@ section h2 {
     }
 
     .rev-text {
-        font-size: 0.9rem; /* Ajuste de fuente para pantallas pequeñas */
+        font-size: 0.9rem;
     }
 }

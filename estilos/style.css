@@ -16,6 +16,11 @@ body {
     padding-left: 7.5rem;
 }
 
+section {
+    display: flex;
+    justify-content: center;
+}
+
 h1 {
     font-size: 60px;
 }
@@ -141,7 +146,7 @@ footer {
 
     body {
         color: #000000;
-        padding-left: 50px;
+        padding-left: 0;
         transition: padding-left 0.3s ease-in-out;
     }
 
@@ -164,40 +169,65 @@ footer {
         font-size: 1.25rem;
     }
 
-    header img {
+    .material-symbols-outlined.btn-nav {
+        position: sticky;
+        display: grid;
+        top: 0;
+        margin-left: 5px;
+        font-size: 30px;
+    }
+
+    .container-cels {
         display: none;
     }
 
-    .material-symbols-outlined.btn-nav {
-        display: grid;
-        padding: 15px 0;
-        left: 0;
-        padding: 1.25rem;
-        margin-left: -10px;
-        margin-top: -10px;
+    .container-cels.active {
+        position: fixed;
+        width: 100vw;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
     }
 
     nav {
-        width: 50px;
+        transform: scaleX(0);
+        position: static;
+        transition: transform 0.3s ease-in-out;
+        width: 70%;
     }
 
-
     nav ul {
+        height: 100%;
+        margin-left: 0;
         transform: scaleX(0);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
         transition: transform 0.3s ease-in-out;
     }
 
+    nav ul li {
+        width: 100%;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
     nav.active ul {
         transform: scaleX(1);
     }
-
+    
     nav.active .text-nav {
         transform: scaleX(1);
     }
-
+    
     nav.active {
-        width: 7.5rem;
+        transform: scaleX(1);
         box-shadow: 0 0 5px #000000;
+        width: 70%;
     }
 
     nav.active ul li:active {
@@ -205,17 +235,23 @@ footer {
         color: #004173;
     }
 
-    nav.active ul li {
-        padding-right: 6.563rem;
-    }
-
     @media (max-width: 320px) or (max-width: 375px) or (max-width: 425px) {
         nav {
-            width: 30px;
+            width: 70%;
+        }
+
+        nav ul .click, .user {
+            margin: 25px 0;
+            font-size: 20px;
+        }
+
+        nav.active ul li {
+            margin: 25px 0;
+            font-size: 20px;
         }
 
         body {
-            padding-left: 30px;
+            padding-left: 0;
         }
 
         .material-symbols-outlined.btn-nav {
