@@ -112,6 +112,7 @@ nav ul .click, .user {
 }
 
 .text-sect {
+    margin: 0 8px;
     text-align: center;
 }
 
@@ -157,7 +158,7 @@ footer {
     }
 
     .img-sect {
-        width:50%;
+        width: 70%;
         margin: 1rem 0 0 0;
     }
 
